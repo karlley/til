@@ -34,7 +34,7 @@ $ brew services start postgresql
 ==> Successfully started `postgresql` (label: homebrew.mxcl.postgresql)
 ```
 
-statuc check
+status check
 
 ```
 $ brew services list
