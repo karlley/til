@@ -64,7 +64,3 @@
 1. [つまづき用テキスト](https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/stumble.md)でメモ作成
 2. [TIL用テキスト](https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/TIL.md)で学習内容をまとめる
 3. [Qiitaアウトプット用テキスト](https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/qiita.md) で解決内容をアウトプット
-
-1. <https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/stumble.md> でメモ作成
-2. <https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/TIL.md> で学習内容をまとめる
-3. <https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/qiita.md> で解決内容をアウトプット

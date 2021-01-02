@@ -1,6 +1,5 @@
 # TIL
 
-[つまづき時の行動](./stumble_flow.md)
 
 * 学んだことをアウトプットする為のリポジトリ
 * Today I Leand(TIL) の運用方法
@@ -13,6 +12,8 @@
 * アウトプットがそのままアピールポイントになる
 
 # flow
+
+[つまづき時の行動](./stumble_flow.md) をベースに行動する
 
 アウトプット先: GitHub, Twitter
 
