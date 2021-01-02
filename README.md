@@ -1,7 +1,11 @@
 # TIL
 
+[つまづき時の行動](./stumble_flow.md)
+
 * 学んだことをアウトプットする為のリポジトリ
 * Today I Leand(TIL) の運用方法
+
+
 
 # target
 
