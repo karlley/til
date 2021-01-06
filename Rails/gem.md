@@ -1,4 +1,4 @@
-## gem environment
+# gem environment
 
 `gem environment` でRuby 関係の詳細情報を確認できる
 
