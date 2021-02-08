@@ -4,6 +4,7 @@ vim を使用したdiff の使い方
 
 ## 参考URL
 
+[[Vim]vimdiffで差分を表示・マージして元ファイルとの差分を確認する](https://wada811.blogspot.com/2013/07/vimdiff-merge-and-difforig.html)
 [Vimdiff が良い感じ。](https://loumo.jp/archives/4000)
 [意外と知られていない diff に関する機能](https://thinca.hatenablog.com/entry/20130426/1366910837)
 [わかりやすい差分(diff)の取り方いろいろメモ](https://qiita.com/bitnz/items/725350b614bafedc581a)
