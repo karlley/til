@@ -14,6 +14,10 @@ ransack について
 
 [Ransackで簡単に検索フォームを作る73のレシピ](http://nekorails.hatenablog.com/entry/2017/05/31/173925)
 
+[ransackを使った複数ワードによるAND検索の実装](https://qiita.com/EastResident/items/54047e6e85dda0418dad)
+
+[ransackを使って検索機能と複数ワードのAND検索の実装](https://qiita.com/shh-nkmr/items/da4d51fd262edbc4aafa)
+
 ## ransack 単語
 
 * `search_form`: 検索フォームを作る, inputタグに`type="search"` が追加される, 「x」ボタンをクリックすると入力された内容をリセットできる
