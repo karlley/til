@@ -1,6 +1,11 @@
 # rails_asset_pipeline_error
 
-アセットパイプラインでのエラーについて
+アセットパイプラインでアセットが正常に読み込まれていない場合の対処方ｊ
+
+```
+Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( jquery.min.js )` to `config/initializers/assets.rb` and restart your server
+```
 
 ## 参考URL
 
@@ -8,7 +13,7 @@
 
 ## 原因
 
-アセットパイプラインでのプリコンパイル先のファイル名に改行コード(`\n`)が入っていｊ
+アセットパイプラインでのプリコンパイル先のファイル名に改行コード(`\n`)が入っている
 
 ## 確認したこと
 
