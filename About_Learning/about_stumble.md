@@ -1,18 +1,15 @@
-# 学習時のつまずき時の対策
+# about stumble
 
-学習時のつまづきに対する認識と行動について
-
-## つまづきについて
-
-つまづきについて明確化することで認識への感度を上げる
+* 学習時のつまづきに対する認識と行動について
+* つまづきについて明確化することで状態認識への感度を上げる
 
 ## 定義
+
+タスクの進行が30分止まった状態を"つまづき"と定義する
 
 * 予想に反した動作をする
 * 未知の知識が必要になる
 * エラーで先に進めない
-
-**タスクの進行が30分止まった状態を"つまづき"と定義する**
 
 ## 危険性
 
@@ -23,7 +20,7 @@
 ## 効果
 
 * 実用的な知識への知見
-* 深い知識を知れる
+* 深い知識を習得できる
 * 学習ストレスへの耐性の向上
 * 言語化の鍛錬
 * 質問力の向上
@@ -34,16 +31,16 @@
 つまづきをポジティブな行動に変えてアウトプットすることで学習効率を上げる
 
 * できるだけ早く"つまづいている"という状況に気付ける仕組み
-* 行動をフレームワークｊ
+* つまづき時行動をフレームワーク化
 * 対策への時間的期限を決める
 
-## 期限
+## つまづき解消の期限
 
 30分/3時間/3日など3を基準にした期限を設ける
 
 * 現状調査(30分)
-* 自己解決期限は3時間
-* 外部サービスへ質問を投げる(回答期限3日)
+* 自己解決(3時間)
+* 外部サービスへ質問(回答期限3日)
 * 回答期限が過ぎても解決しない問題は違う方法を模索する
 
 ## 行動
@@ -56,11 +53,12 @@
 6. つまづきへの自己解決を試みる(3時間)
 7. 別のタスクを進める/外部サービスの回答待ち(3日)
 8. 未解決の場合は別の方法を探す
+9. 解決, 自己解決を試みる, 自己解決出来ない の3つの状態のどこかで必ずアウトプットする
 
-## アウトプット
+## アウトプット用テンプレート
 
-アウトプットの流れ
+* [解決したことのQiita アウトプット](https://github.com/karlley/dotfiles/blob/master/Apps/clipy/snippets/output/qiita.md)
 
-1. [つまづき用テキスト](https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/stumble.md)でメモ作成
-2. [TIL用テキスト](https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/TIL.md)で学習内容をまとめる
-3. [Qiitaアウトプット用テキスト](https://github.com/karlley/dotfiles/blob/master/apps/clipy/snippets/output/qiita.md) で解決内容をアウトプット
+* [自己解決できない事を質問する](https://github.com/karlley/dotfiles/blob/master/Apps/clipy/snippets/output/question.md)
+
+* [自己解決できない事の作業メモ](https://github.com/karlley/dotfiles/blob/master/Apps/clipy/snippets/output/stumble.md)

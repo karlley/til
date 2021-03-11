@@ -10,12 +10,12 @@
 
 ## ツール
 
-* vscode
-* 日付別のmarkdown ファイル
+* [VSNote](https://github.com/karlley/dotfiles/blob/master/VSCode/VSNotes.md)
+* [VSCode markdown TOC](https://github.com/karlley/dotfiles/blob/master/VSCode/vscode_markdown_toc.md)
+* [clipy](https://github.com/karlley/dotfiles/blob/master/Apps/clipy/clipy.md)
 
 ## 開発時のノートの取り方
 
-1. `当日の日付.md` のノートを`デスクトップ or 書類ディレクトリ` に作成
-2. vscode で作成したノートを開く
-3. clipy のスニペットを使用して不明点、使用したツールなどをノートを作成
-4. 作業後、作成したメモを元にアウトプット用の記事を作成し投稿
+1. 作業しているタスクが分かる名前で`Users/karlley/Documents` にVSCodeでmarkdown ファイルを作成(`command + shift + p` > `"Create a New Note"` 入力)
+2. clipy のスニペット, markdown TOCを使用して分かりやすくメモを取る
+3. 作業後、作成したメモを元にアウトプット用の記事を作成し投稿
