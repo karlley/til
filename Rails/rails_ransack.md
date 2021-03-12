@@ -20,7 +20,7 @@ ransack について
 
 ## ransack 単語
 
-* `search_form`: 検索フォームを作る, inputタグに`type="search"` が追加される, 「x」ボタンをクリックすると入力された内容をリセットできる
+* `search_form_for`: 検索フォームを作る, inputタグに`type="search"` が追加される, 「x」ボタンをクリックすると入力された内容をリセットできる
 * `params[:q]`: 検索パラメータ
 * `ransack`: 検索パラメータから検索するメソッド
 * `result`: 検索結果をActiveRecord_Reration オブジェクトに変換する
