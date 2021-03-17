@@ -51,3 +51,13 @@ SCSS 拡張子のファイルでBootstrap を読み込む
 @import "bootstrap-sprockets";
 @import "bootstrap";
 ```
+
+* bootstrap のcss系 ファイルが複数ある場合は拡張子が必要
+* bootstrap テンプレートを使用する場合など
+
+```CSS
+# assets/stylesheets/bootstrap.scss とassets/stylesheets/bootstrap.css の2つのファイルがある場合
+# bootstrap.scss をコンパイルファイルに含みたい
+@import "bootstrap-sprockets";
+@import "bootstrap.scss";
+```

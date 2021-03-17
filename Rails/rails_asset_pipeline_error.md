@@ -1,6 +1,6 @@
 # rails_asset_pipeline_error
 
-アセットパイプラインでアセットが正常に読み込まれていない場合の対処方ｊ
+アセットパイプラインでアセットが正常に読み込まれていない場合の対処方
 
 ```
 Asset was not declared to be precompiled in production.
