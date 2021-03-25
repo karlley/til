@@ -1,4 +1,4 @@
-# rails_show_another_class_view
+# another_class_view_calling
 
 `@feed_items` でのパーシャル呼び出しが分かりづらい
 

@@ -1,4 +1,4 @@
-# rails_link_to_insert_html_tag
+# link_to_insert_html_tag
 
 `link_to` メソッドにHTML タグを含める
 

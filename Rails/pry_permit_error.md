@@ -1,6 +1,6 @@
-# rails pry permit error
+# pry_permit_error
 
-binding.pry で値を確認中の`permit error` について
+`binding.pry` で値を確認中の`permit error` について
 
 ```Ruby
 # エラー内容

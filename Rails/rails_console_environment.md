@@ -2,13 +2,15 @@
 
 `rails c` を環境別で起動する方法
 
-## 参考URL
+## 参照
 
 [【console】rails c RAILS_ENV=testは廃止予定なのでrails c -e testを使う](https://qiita.com/sukebeeeeei/items/cf0ccb6f7e8b4e8a775b)
 
 [【Rails】envメソッドで環境確認する方法と各コマンドの環境指定方法とは？](https://pikawaka.com/rails/env)
 
-## how to
+## 起動方法
+
+デフォルトの環境(development) で起動
 
 ```Shell
 # development 環境で起動
@@ -19,10 +21,13 @@ $ rails console
 "development"
 ```
 
+test 環境で起動
+
 ```Shell
-# test 環境で起動
 $ rails console -e test
 ```
+
+起動環境の変更
 
 ```Shell
 # console 内で環境を変更する

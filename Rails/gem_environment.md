@@ -1,10 +1,14 @@
-# gem environment
+# gem_environment
 
 `gem environment` でRuby 関係の詳細情報を確認できる
 
-https://qiita.com/h5y1m141@github/items/74029cab9706971c8dbe
+## 参照
 
-```
+[Rubyが参照してるgemのパスやインストール済gemを確認する方法 \- Qiita](https://qiita.com/h5y1m141@github/items/74029cab9706971c8dbe)
+
+## 使い方
+
+```Shell
 $ gem environment
 RubyGems Environment:
   - RUBYGEMS VERSION: 3.0.3

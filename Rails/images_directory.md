@@ -1,4 +1,4 @@
-# rails_images_directory_20210318
+# images_directory
 
 画像を配置するディレクトリについて
 

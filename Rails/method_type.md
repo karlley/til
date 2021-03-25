@@ -1,8 +1,8 @@
-# Rails method
+# method_type
 
-メソッドに関して
+メソッドの種類
 
-## 参考URL
+## 参照
 
 [オブジェクトのことをオブジェクト自身に問い合わせて確認する方法](https://qiita.com/mogulla3/items/7736fe54ebf97cacd898)
 

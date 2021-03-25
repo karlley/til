@@ -1,14 +1,14 @@
-# rails no ransack error
+# no_ransack_error
 
-複数キーワードでの検索機能を追加した際にエラー発生
+複数キーワードでの検索機能を追加した際のエラー
 
 ## エラー内容
 
 `ActionView::Template::Error - No Ransack::Search object was provided to search_form_for!:`
 
-存在すると思って書かれた変数あるいはメソッドが単に存在しなかった場合のエラｊ
+存在すると思って書かれた変数あるいはメソッドが単に存在しなかった場合のエラー
 
-## 参考URL
+## 参照
 
 [「No Ransack::Search object was provided to search_form_for!」エラーを解決したい](https://teratail.com/questions/207533)
 

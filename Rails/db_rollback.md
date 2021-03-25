@@ -1,11 +1,12 @@
-# rails db rollback
+# db_rollback
 
 rails のロールバックのやり方
 
-## 参考URL
+## 参照
 
-[qiita](https://qiita.com/s_tatsuki/items/3e1f119c91e21b8f0c33)
-[qiita](https://qiita.com/ShYaruki/items/37007e97204705d5e87c)
+[【Rails】$rails db:rollbackしたい時の間違えない手順 \- Qiita](https://qiita.com/s_tatsuki/items/3e1f119c91e21b8f0c33)
+
+[rails db:rollbackって一つずつしか差し戻せないんだよって話 \- Qiita](https://qiita.com/ShYaruki/items/37007e97204705d5e87c)
 
 ## 手順
 

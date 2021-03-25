@@ -1,8 +1,8 @@
-# rails_faker_local_20210225
+# faker_local
 
 Facker gem のlocal 変更
 
-## 参考URL
+## 参照
 
 [Faker を i18n locale :ja で使うときは Faker::Config\.locale を :en にセットしなおすべし \- Qiita](https://qiita.com/kyanny/items/00ef3727c7738f2cc26c)
 

@@ -1,13 +1,13 @@
 # helpers
 
-app/helpers ディレクトリについて
+`app/helpers` ディレクトリについて
 
 * view ファイルは基本的に処理は書かない
 * view ファイルの分岐処理等を減らす為に使用する
 * デフォルトでは全てのview で全てのhelpers ファイルが読み込まれる
 * view ファイル毎に読み込むhelpers ファイルを指定する事も可能
 
-## how to use
+## 使い方
 
 helper ファイルで定義したメソッドでview ファイルの表示を分岐させる
 

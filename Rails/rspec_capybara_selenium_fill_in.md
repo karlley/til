@@ -1,11 +1,11 @@
-# rspec capybara selenium fill in
+# rspec_capybara_selenium_fill_in
+
+fill_in で`q_name_cont` にsearch_word が入力されてない
 
 ```Ruby
 Capybara::ElementNotFound:
        Unable to find field "q_name_cont" that is not disabled
 ```
-
-fill_in で`q_name_cont` にsearch_word が入力されてない
 
 ```Ruby
 it "feed から検索ワードに該当する結果が表示されること" do
@@ -20,7 +20,7 @@ it "feed から検索ワードに該当する結果が表示されること" do
 end
 ```
 
-## 参考URL
+## 参照
 
 [Selenium の locator とうまくつきあうための話](https://qiita.com/okitan/items/cdf8809405821e057609)
 

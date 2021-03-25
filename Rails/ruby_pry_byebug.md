@@ -1,23 +1,29 @@
-# Ruby pry-byebug
+# ruby_pry_byebug
 
-https://github.com/deivid-rodriguez/pry-byebug
+Ruby 単体のアプリでpry-byebug を使う
 
-https://qiita.com/ryosuketter/items/da3a38d0d41c7e20a2d6
+[deivid\-rodriguez/pry\-byebug: Step\-by\-step debugging and stack navigation in Pry](https://github.com/deivid-rodriguez/pry-byebug)
 
-## install
+[pry\-byebug を使ってRailsアプリをデバックする方法 \- Qiita](https://qiita.com/ryosuketter/items/da3a38d0d41c7e20a2d6)
+
+## インストール
+
+gem を使いインストール
 
 ```
 $ cd working_dir
 $ gem install pry-byebug
 ```
 
-## how to use
+## 使い方
 
 1. デバッグするファイルに`require 'pry'` を追記
 2. ブレイクポイントに`binding.pry` を追記
 3. `ruby` コマンドでファイルを動かすとデバッグモードになる
 
-## command
+## コマンド
+
+pry-byebug 用のコマンド
 
 ```
 next

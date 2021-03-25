@@ -1,4 +1,4 @@
-# rails_asset_pipeline_error
+# asset_pipeline_error
 
 アセットパイプラインでアセットが正常に読み込まれていない場合の対処方
 
@@ -7,7 +7,7 @@ Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( jquery.min.js )` to `config/initializers/assets.rb` and restart your server
 ```
 
-## 参考URL
+## 参照
 
 [Rails Asset Pipelineがうまくいかないときの問題の切り分けかた \- Qiita](https://qiita.com/metheglin/items/c5c756246b7afbd34ae2#comments)
 
@@ -53,7 +53,7 @@ $ rails c
 ]
 ```
 
-### プリコンパイル設定の確認
+### 2. プリコンパイル設定の確認
 
 * 読み込むべきファイル(css, js 等) が読み込みディレクトリに設置されているか?
 * マニフェストファイル(application.scss) から読み込むべきファイルが指定されているか?
@@ -64,8 +64,9 @@ app/assets/stylesheets/*.css
 app/assets/javascripts/*.js(application.js を除く)
 ```
 
+プリコンパイル読み込み先確認
+
 ```Ruby
-# プリコンパイル読み込み先
 # app/config/initializers/assets.rb
 Rails.application.config.assets.precompile += %w(
 animate.css \
@@ -95,8 +96,9 @@ owl.carousel.min.js \
 respond.min.js)
 ```
 
+プリコンパイルされるファイルを確認
+
 ```Shell
-# プリコンパイルされるファイルを確認
 $ rails c
 > Rails.application.config.assets.precompile
 [
@@ -130,10 +132,15 @@ $ rails c
 ]
 ```
 
+## 原因
+
 プリコンパイルされるファイル名に改行コード(\n) が入ってしまっている
 
+## 対策
+
+改行コード(\)を削除
+
 ```Ruby
-# 改行コード(\)を削除
 # config/initializers/assets/rb
 Rails.application.config.assets.precompile += %w(
 animate.css

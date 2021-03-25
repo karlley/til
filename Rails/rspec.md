@@ -1,8 +1,8 @@
 # rspec
 
-* rails のテストツール
+rails のテストツール
 
-<https://relishapp.com/rspec>
+[Publisher: RSpec \- Relish](https://relishapp.com/rspec)
 
 ## テストファイル作成コマンド
 

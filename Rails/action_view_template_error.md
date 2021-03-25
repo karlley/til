@@ -1,10 +1,10 @@
-# rails action view template error
+# action view template error
 
 存在すると思って書かれた変数あるいはメソッドが存在しなかった場合のエラー
 
 `ActionView::Template::Error`
 
-## 参考URL
+## 参照
 
 [「No Ransack::Search object was provided to search_form_for!」エラーを解決したい](https://teratail.com/questions/207533)
 

@@ -1,8 +1,8 @@
-# rails ransack actionview template error
+# ransack_actionview_template error
 
-`ActionView::Template::Error`
+ransack での`ActionView::Template::Error`
 
-正しいテンプレートが読み込めていない
+正しいテンプレートが読み込めていない系のエラー
 
 ## 原因予想
 

@@ -2,11 +2,15 @@
 
 個人開発でのgit の流れ
 
-https://qiita.com/kodai_0122/items/18f7faa80f0302244c51
+## 参照
 
-https://note.com/kodai_0122/n/n109e4aff8643
+[【GitHub】Milestone, Issue, Pull Requestを関連付けて扱う \- Qiita](https://qiita.com/kodai_0122/items/18f7faa80f0302244c51)
 
-## 1. PR 用コミット作成
+[【実践編①】ポートフォリオ作成のロードマップ〜RSpec、Rubocop導入〜｜こうだい＠フルリモートエンジニア｜note](https://note.com/kodai_0122/n/n109e4aff8643)
+
+## 流れ
+
+PR 用コミット作成
 
 ```Shell
 $ git diff
@@ -16,22 +20,24 @@ $ git commit -m "message"
 $ git push --set-upstream origin branch_name(git push -u origin branch_name と同じ)
 ```
 
-## 2. PR 作成
+PR 作成
 
+```
 1. GitHub にbranch_name でブランチが作成される
 2. GitHub Compare & pull request
 3. PR Title, 該当するIssue 番号(Close #) を入力(PR名とIssue名は同じでok)
 4. GitHub Create pull request
 5. Milestone 設定
 6. commit を積む
-
-## 3. Merge
+```
 
 リモート側をMerge
 
+```
 1. GitHub Files changed ページで変更内容確認
 2. GitHub Conversation ページ Merge pull request
 3. GitHub Confume merge(コメントはPR名と同じでok)
+```
 
 ローカル側もMerge
 
@@ -40,7 +46,7 @@ $ git checkout master
 $ git merge repo_name
 ```
 
-## 4. Heroku
+## Heroku を使用してる場合の追加作業
 
 model を追加した場合はmigrate 実行
 

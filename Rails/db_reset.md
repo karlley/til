@@ -1,4 +1,4 @@
-# rails_db_reset_20210225
+# db_reset
 
 rails のdb をリセットする方法
 

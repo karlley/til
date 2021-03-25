@@ -1,4 +1,4 @@
-# git_branch_name_main
+# git_branch_main
 
 git のメインリポジトリ名の`master` を`main` に変更する
 
@@ -25,4 +25,4 @@ $ git config --global init.defaultBranch main
 
 ## GitHub のリポジトリ名変更
 
-2020/10/10 からデフォルトブランチ名が`main`名が`main` に変更されている?
+202010/10 からデフォルトブランチ名が`main`名が`main` に変更されている?

@@ -1,4 +1,4 @@
-# rails_file_field_style
+# file_field_style
 
 ファイル選択画面の`file_field` ボタンにスタイルを当てる方法
 

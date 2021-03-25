@@ -1,4 +1,4 @@
-# rails logger
+# logger
 
 `logger` コマンドを使ったlog の見方
 

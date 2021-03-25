@@ -1,8 +1,16 @@
-### byebug
+# byebug
 
-rails は基本gem の中にbyebug が含まれている
+デバッグツールbyebug について
 
-```
+[deivid\-rodriguez/byebug: Debugging in Ruby 2](https://github.com/deivid-rodriguez/byebug)
+
+* デバッグツール
+* byebug はrails の基本gem の中に含まれている
+* `binding.pry` の方が使いやすい
+
+## 使い方
+
+```Shell
 $ byebug -v
 Running byebug 11.1.1
 ```

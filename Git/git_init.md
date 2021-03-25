@@ -64,6 +64,3 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 ```Shell
 $ $ git push -u origin master
 ```
-
-
-

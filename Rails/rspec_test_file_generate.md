@@ -1,6 +1,6 @@
 # rspec_test_file_generate
 
-RSpec のテストファイル生成コマンド
+RSpec のテストファイルを生成
 
 ```Shell
 # model spec

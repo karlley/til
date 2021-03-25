@@ -1,10 +1,10 @@
-# ransack add refind search
+# ransack
 
-ransack について
+検索機能のgem ransack について
 
 [ransack](https://github.com/activerecord-hackery/ransack)
 
-## 参考URL
+## 参照
 
 [[Rails]ransackを利用した色々な検索フォーム作成方法まとめ](https://qiita.com/nishina555/items/2c1f8bae980e426519bc)
 
@@ -18,7 +18,7 @@ ransack について
 
 [ransackを使って検索機能と複数ワードのAND検索の実装](https://qiita.com/shh-nkmr/items/da4d51fd262edbc4aafa)
 
-## ransack 単語
+## ransack で使われるメソッド
 
 * `search_form_for`: 検索フォームを作る, inputタグに`type="search"` が追加される, 「x」ボタンをクリックすると入力された内容をリセットできる
 * `params[:q]`: 検索パラメータ
@@ -28,7 +28,7 @@ ransack について
 * `_eq`: 検索したワードが含まれているレコードを取得するためのメソッド, 完全一致検索
 * `_or_`: 複数のカラムを同時検索
 
-## ransack モード
+## モード
 
 ransack の2つのモードについて
 
