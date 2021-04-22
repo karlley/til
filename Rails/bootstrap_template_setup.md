@@ -16,6 +16,8 @@ Bootstrap3 対応(HTML5)テンプレート
 
 ## 参考URL
 
+[【実践編⑦】ポートフォリオ作成のロードマップ〜ログ、Bootstrapテンプレート〜｜こうだい＠フルリモートエンジニア｜note](https://note.com/kodai_0122/n/n2ca036c070e9#T9ff0)
+
 [RailsでCSSの読み込む順番を制御する方法 \- Qiita](https://qiita.com/takish/items/c5f264577d2db75fd10c)
 
 [アセットパイプライン \- Railsガイド](https://railsguides.jp/asset_pipeline.html)
