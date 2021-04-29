@@ -11,6 +11,8 @@
 
 [【CSS】スマホで Media Queries が効かないときの対処法 \- Qiita](https://qiita.com/noraworld/items/10926dfa6c88f3afdbb3)
 
+[cssの拡張言語scssが面白くて便利だった\(中級編\) – ANTEKU CREATIVE BLOG](https://anteku.jp/blog/develop/scss2/)
+
 ## 手順
 
 1. `<head>` タグにviewport 設定追加
@@ -91,3 +93,32 @@ style
 画面幅 0 ~ 770px 以下のスタイル
 }
 ```
+
+## scss でメディアクエリを使う
+
+メディアクエリを変数化して使用箇所で呼び出して使用する
+
+```SCSS
+/* メディアクエリの変数を定義 */
+
+/* media query */
+$media-sp: 768px;
+
+@mixin sp {
+  @media only screen and (max-width: $media-sp) {
+    @content;
+  }
+}
+```
+
+```SCSS
+/* メディアクリ呼び出し */
+
+h1 {
+  font-size: 300px;
+  @include sp {
+    font-size: 80px;
+  }
+}
+```
+
