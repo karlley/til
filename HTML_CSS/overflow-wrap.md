@@ -6,6 +6,8 @@
 
 [overflow\-wrap: break\-word; や word\-break: break\-all; が万能の改行処理だったなら、こんなに苦労していない \- Qiita](https://qiita.com/akane_kato/items/2b1385574e1a1babdde1)
 
+[word\-breakとword\-wrapはややこしい](https://w3g.jp/blog/confusing_word-break_word-wrap)
+
 ## プロパティの種類
 
 * `overflow-wrap: break-word;` :幅優先, 幅より長い単語は強制折返し, テーブル使用不可
