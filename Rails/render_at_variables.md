@@ -16,6 +16,8 @@
 
 [レイアウトとレンダリング \- Railsガイド](https://railsguides.jp/layouts_and_rendering.html#%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B)
 
+[Rails の render で複数の変数を渡す \- Qiita](https://qiita.com/tyler_ueki/items/c42c5cdfee6b91db52ac)
+
 ## ポイント
 
 * `@変数` でのパーシャル呼び出しは省略形である
@@ -27,6 +29,7 @@
   * パフォーマンスの観点から@変数を使った使ったコレクションを優先的に使った方が良い
   * 冗長だが`render partial: 'tweets/tweet', collection: @tweets` の形で記述すると見通しが良い
   * パーシャルに渡るローカル変数名は`partial: 'hoge'` にしていた場合は`hoge` がローカル変数名になる
+  * パーシャルに渡す変数は複数渡すことも可能
 
 ```Ruby
 # 単数形の原型
