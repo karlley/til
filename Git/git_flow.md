@@ -8,9 +8,21 @@
 
 [【実践編①】ポートフォリオ作成のロードマップ〜RSpec、Rubocop導入〜｜こうだい＠フルリモートエンジニア｜note](https://note.com/kodai_0122/n/n109e4aff8643)
 
+[【Git】ブランチの命名規則を調べてたらIssueドリブン開発という存在を知った \- Qiita](https://qiita.com/c6tower/items/fe2aa4ecb78bef69928f)
+
 ## 流れ
 
-PR 用コミット作成
+### 1. Issue、ブランチ 作成
+
+1. GitHub にタスクを元にしたIssue 作成
+2. ローカルでIssue 番号を元にしたブランチ作成(`#` を`\` でエスケープしてブランチ名を入力)
+
+```
+$ git checkout -b \#number_branch_name
+
+```
+
+### 2. PR 用コミット作成
 
 ```Shell
 $ git diff
@@ -20,7 +32,7 @@ $ git commit -m "message"
 $ git push --set-upstream origin branch_name(git push -u origin branch_name と同じ)
 ```
 
-PR 作成
+### 3.PR 作成
 
 ```
 1. GitHub にbranch_name でブランチが作成される
@@ -31,7 +43,7 @@ PR 作成
 6. commit を積む
 ```
 
-リモート側をMerge
+### 4.リモート側をMerge
 
 ```
 1. GitHub Files changed ページで変更内容確認
@@ -39,14 +51,14 @@ PR 作成
 3. GitHub Confume merge(コメントはPR名と同じでok)
 ```
 
-ローカル側もMerge
+### 5. ローカル側もMerge
 
 ```Shell
 $ git checkout master
 $ git merge repo_name
 ```
 
-## Heroku を使用してる場合の追加作業
+### 6.Heroku を使用してる場合の追加作業
 
 model を追加した場合はmigrate 実行
 
