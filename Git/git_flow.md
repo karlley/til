@@ -24,6 +24,8 @@ $ git checkout -b \#number_branch_name
 
 ### 2. PR 用コミット作成
 
+**ブランチ名に`#` を使用する場合は`\` でエスケープが必要**
+
 ```Shell
 $ git diff
 $ git status
@@ -37,7 +39,7 @@ $ git push --set-upstream origin branch_name(git push -u origin branch_name と�
 ```
 1. GitHub にbranch_name でブランチが作成される
 2. GitHub Compare & pull request
-3. PR Title, 該当するIssue 番号(Close #) を入力(PR名とIssue名は同じでok)
+3. PR名, 該当するIssue 番号(Close #) を入力(PR名とIssue名は同じでok)
 4. GitHub Create pull request
 5. Milestone 設定
 6. commit を積む

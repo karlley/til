@@ -2,7 +2,7 @@
 
 作業ブランチからmaster へのmerge, heroku のseed 作成まで
 
-## 参考URL
+## 参照
 
 [【実践編①】ポートフォリオ作成のロードマップ〜RSpec、Rubocop導入〜｜こうだい＠フルリモートエンジニア｜note](https://note.com/kodai_0122/n/n109e4aff8643?magazine_key=mbce36d0b3160)
 
