@@ -19,7 +19,6 @@
 
 ```
 $ git checkout -b \#number_branch_name
-
 ```
 
 ### 2. PR 用コミット作成
@@ -31,7 +30,7 @@ $ git diff
 $ git status
 $ git add .
 $ git commit -m "message"
-$ git push --set-upstream origin branch_name(git push -u origin branch_name と同じ)
+$ git push --set-upstream origin \#number_branch_name(git push -u origin \#number_branch_name と同じ)
 ```
 
 ### 3.PR 作成
@@ -77,6 +76,7 @@ $ heroku pg:reset DATABASE
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 $ heroku restart
+
 # heroku pg:reset DATABASE で警告が出る
 # app名か--confirm app名 をオプションに付けて実行すればok
 ❯ heroku pg:reset DATABASE
@@ -87,4 +87,14 @@ $ heroku restart
 
 > karlley-departure
 Resetting postgresql-cylindrical-22088... done
+```
+
+seed ファイルを環境別に作成している場合
+
+```
+$ git push heroku master
+$ heroku pg:reset DATABASE
+$ heroku run rails db:migrate
+$ heroku run rails db:seed RAILS_ENV=production
+$ heroku restart
 ```
