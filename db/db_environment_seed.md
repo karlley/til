@@ -28,4 +28,12 @@ $ rails db:migrate:reset RAILS_ENV=test
 
 # test 環境の初期データ追加
 $ rails db:seed RAILS_ENV=test
+
+# production 環境の初期データ削除
+$ rails db:migrate:reset RAILS_ENV=production
+
+# test 環境の初期データ追加
+$ rails db:seed RAILS_ENV=production
 ```
+
+**本番環境の`migrate`と`seed` は不要かも**
