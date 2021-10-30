@@ -10,6 +10,12 @@ API Key などを別ファイルにする事でセキュリティを高める
 
 [Railsで使える環境変数を管理できるgem\(dotenv\-rails\)や\.envの導入方法 \- Qiita](https://qiita.com/ryosuketter/items/ceb592dc6b23a20e51b5)
 
+## ポイント
+
+* `.zshrc` に環境変数を設定しなくてもrails 環境のみで環境変数の設定が可能
+* git で追跡できないように設定しないとパスワード等を悪用される
+* mac 本体へ定義した環境変数と分けてアプリ毎に環境変数を管理できる
+* heroku などのデプロイ先には別途コマンド等で環境変数をセットする必要がある
 ## 導入
 
 1. Gem dotenv-rails インストール

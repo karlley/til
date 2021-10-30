@@ -38,7 +38,7 @@ $ git push --set-upstream origin \#number_branch_name(git push -u origin \#numbe
 ```
 1. GitHub にbranch_name でブランチが作成される
 2. GitHub Compare & pull request
-3. PR名, 該当するIssue 番号(Close #) を入力(PR名とIssue名は同じでok)
+3. PR名(Issue名), コメント(Close #issue_number) を入力
 4. GitHub Create pull request
 5. Milestone 設定
 6. commit を積む
@@ -56,19 +56,22 @@ $ git push --set-upstream origin \#number_branch_name(git push -u origin \#numbe
 
 ```Shell
 $ git checkout master
+$ git branch -l
 $ git merge repo_name
 ```
 
 ### 6.Heroku を使用してる場合の追加作業
 
-model を追加した場合はmigrate 実行
+作業内容に応じて下記3つのどれかを実行
+
+1. model を追加した場合はmigrate 実行
 
 ```Shell
 $ git push heroku master
 $ heroku run rails db:migrate
 ```
 
-サンプルデータ再生成 + DB リセット
+2. サンプルデータ再生成 + DB リセット
 
 ```Shell
 $ git push heroku master
@@ -89,7 +92,7 @@ $ heroku restart
 Resetting postgresql-cylindrical-22088... done
 ```
 
-seed ファイルを環境別に作成している場合
+3. seed ファイルを環境別に作成している場合
 
 ```
 $ git push heroku master

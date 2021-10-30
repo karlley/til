@@ -4,6 +4,32 @@
 
 ## 参照
 
+### 実装例
+
+[【Rails】 gem ancestry カテゴリー機能実装について \- Qiita](https://qiita.com/k_suke_ja/items/aee192b5174402b6e8ca)
+
+[【Rails】ancestryを使って動的なセレクトボックスを作る方法 \- Qiita](https://qiita.com/kenz-dev/items/07f6b5f7fdcf2761ac8f)
+
+[【Rails】セレクトボックスを活用した多階層構造データの表示について \- Qiita](https://qiita.com/nozonozo/items/51c3f9915f5fbb23cacc)
+
+[ancestryによる多階層構造データを用いて、動的カテゴリーセレクトボックスを実現する~Ajax~ \- Qiita](https://qiita.com/ATORA1992/items/bd824f5097caeee09678)
+
+[多階層カテゴリでancestryを使ったら便利すぎた \- Qiita](https://qiita.com/Sotq_17/items/120256209993fb05ebac)
+
+[【Rails】 ancestryを使って多階層のデータを扱おう \| Pikawaka \- ピカ1わかりやすいプログラミング用語サイト](https://pikawaka.com/rails/ancestry)
+
+[多階層構造のカテゴリーを実現する、seedを作ってみた \- Qiita](https://qiita.com/ATORA1992/items/617088f885117532454e)
+
+[Railsで動的なセレクトボックスを作る最も簡単な方法。 \- Qiita](https://qiita.com/i__kobe/items/3974d9ec78dbf082a5ef)
+
+### Ajax, jbuilder について
+
+[Ajax\(非同期通信\)についてわかりやすさ重視でまとめてみた\(Rails使用のデモ付\) \- Qiita](https://qiita.com/motoki0208/items/409ccf256e84017ea307)
+
+[Railsでajaxを実装する。基本の構造から、controller・jbuilderの書き方など。\[Rails\] \- Qiita](https://qiita.com/tanutanu/items/239abfe88bbbeec772bf)
+
+[Ajaxの大まかな流れと事前準備（Ruby on Rails） \| 猫好きWeb屋のOutPutBlog](https://www.makotoarai.com/ajax-preparation-and-flow/)
+
 ## ポイント
 
 * gem `ancestry` でカテゴリとアイテムの親子関係化
