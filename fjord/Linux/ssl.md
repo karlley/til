@@ -16,6 +16,7 @@ web 上で安全にデータの送受信を行うプロトコル
 
 SSL を標準化したもの
 
+* Transport Layer Security
 * SSL と仕組みはほぼ同じ
 * SSL は広い意味でTLS を含む場合がある
 * SSL/TLS と併記される場合が多い
