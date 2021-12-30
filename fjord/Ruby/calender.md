@@ -190,3 +190,39 @@ print "\e[30m\e[47mテキスト"
 # 文字を黒、背景を白、テキスト出力後にデフォルトの色に戻す
 print "\e[30m\e[47mテキスト\e[0m"
 ```
+
+## ぼっち演算子
+
+[NEWS for Ruby 2\.3\.0 \(Ruby 3\.0\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/latest/doc/news=2f2_3_0.html)
+
+[safe navigation operator](https://bake0937.hatenablog.com/entry/2020/01/20/021459)
+
+* safe navigation operator
+* オブジェクトが`nil` だった場合の`NoMethodError` を防止できる
+* `||` を繋げて使うことで`nil` だった場合のデフォルト値を設定できる
+
+
+```Ruby
+# object がnil でない場合にmethod を実行、nil の場合はnil を返す
+object&.method
+
+# object がnil でない場合にmethod を実行、nil の場合はother_object を返す
+object&.method || other_object
+```
+
+```Ruby
+# nil でない場合
+object = 10
+object&.to_s
+#=> "10"
+
+# nil の場合
+object = nil
+object&.to_s
+#=> nil
+
+# nil の場合に他のオブジェクトを返す
+object = nil
+object&.to_s || "other object"
+#=> "other object"
+```

@@ -65,6 +65,7 @@ ruby-build 20200115
 
 * system のRuby からrbenv を使用したRuby に切り替える為にパス設定を追加
 * `/usr/bin/ruby` から`/Users/○○/.rbenv/shims/ruby` にパスを変更
+* system のRuby しかインストールされていない場合はsystem 以外のバージョンをインストールすることでパス設定が反映される
 
 ```Shell
 # パス設定前のパス確認
