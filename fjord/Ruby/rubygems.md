@@ -64,6 +64,8 @@ $ gem install byebug
 
 ## byebug の使い方
 
+[printデバッグにさようなら！Ruby初心者のためのByebugチュートリアル \- Qiita](https://qiita.com/jnchito/items/5aaf323ab4f24b526a61)
+
 byebug からプログラムを起動
 
 ```Shell
@@ -89,13 +91,3 @@ $ ruby -rbyebyg fizzbuzz.rb
 * `quit`, `q!`: プログラムの停止、プログラムの強制停止
 * 変数名がbyebug のコマンドとぶつかる場合は`eval` メソッドを使う
 * リターンキーで入力したコマンドを再度実行できる
-
-
-
-
-
-
-
-
-
-

@@ -201,3 +201,38 @@ Collaborators: GitHubのユーザーでかつ誰かのリポジトリにアク�
 2. `Manage access` タブ
 3. `Add people` クリック
 4. Collaborator に追加する`reporobo` を検索して追加
+
+## ローカルブランチがリモートブランチより遅れている
+
+状況: 作業ブランチをリモートのmain ブランチにマージ後、ローカルのmain ブランチに切り替えた場合に発生した
+原因: ローカルのmain ブランチがリモートのmain ブランチから遅れている
+対策: リモートのmain ブランチにマージ後、ローカルのmain ブランチで`git pull` で早送りすることで`HEAD` が先頭に追いつく
+今後: 作業ブランチを作成する前にローカルのmain ブランチで`git pull` することで最新の状態から作業ブランチを作成できる
+
+```
+# main ブランチに切り替えた際のログ
+Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+```
+
+## 間違ってpush したコミットを打ち消す
+
+`revert` を使って打ち消しコミットを作成してリモートに`push` する
+
+[【gitコマンド】いまさらのrevert \- Qiita](https://qiita.com/chihiro/items/2fa827d0eac98109e7ee)
+
+* 打ち消しコミットが追加される
+* `push` してもコンフリクトしない
+* 履歴が残るので安全
+* 履歴に不要な打ち消しコミットが追加されてしまう
+
+```Shell
+# 直前のコミットを打ち消す
+$ git revert HEAD
+
+# 2つ前のコミットを打ち消す
+$ git revert HEAD~2 or git revert HEAD~~
+
+# コミットID のコミットを打ち消す
+$ git revert コミットID
+```

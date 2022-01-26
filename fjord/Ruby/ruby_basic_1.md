@@ -1,6 +1,6 @@
-# ruby_basic
+# ruby_basic_1
 
-Ruby の基礎
+ゼロからわかるRuby超入門
 
 ## レシーバ
 
