@@ -52,3 +52,29 @@ $ git checkout -b update-readme origin/update-readme # チェックアウト
 
 # ここから動作確認
 ```
+
+## pull request のテンプレート設定
+
+[リポジトリ用のプルリクエストテンプレートの作成 \- GitHub Docs](https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+[\.github/pull\_request\_template\.md](https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+1. GitHub 上で`Add file` からリポジトリのルートに`.github/pull_request_template.md` を作成
+2. 作成したテンプレートの内容を追記
+3. ページ下部の`Commit new file` から`デフォルトブランチ` にコミットする
+
+* テンプレートはデフォルトブランチ(`main` や`master`)に設置する必要がある
+* テンプレートの設置ディレクトリは`.github/`、`docs`、`プロジェクトのルート` が選べる
+
+## 進行中(WIP)のPR作成
+
+進行中(WIP)のPull Request をドラフトとして作成することで不用意なマージ等を防止する
+
+[プルリクエストのステージの変更 \- GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request)
+
+[WIPの代わりにDraft Pull Requestを利用する \(GitHub\) \- Qiita](https://qiita.com/tatane616/items/13da1b6797a7b871ad58)
+
+* PR作成時に`Create draft pull request` でドラフトとしてPR を作成する
+* Open にしたPR をドラフトに変更する場合は該当PRのページで`Reviewers` > `Convert to draft` をクリックする
+* ドラフトのPRには左上部に`Draft` がグレーのボタンで表示される
+* ドラフトからOpen のPRに変更したい場合は該当PR のページ下部の`Ready for review` をクリックする

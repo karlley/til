@@ -126,7 +126,7 @@ $ apt list --installed | grep ssh
 1. 【クライアント】接続用の秘密鍵/公開鍵の生成
 2. 【クライアント】公開鍵を接続先(リモート)に渡す
 3. 【リモート】 OpenSSH で接続に関する設定
-4. 【クライアント】ssh でリモートへの接続の確
+4. 【クライアント】ssh でリモートへの接続の確認
 
 ## 1. 【クライアント】接続用の秘密鍵/公開鍵の生成
 
@@ -188,6 +188,13 @@ Number of key(s) added:        1
 
 Now try logging into the machine, with:   "ssh 'user_name@ipアドレス'"
 and check to make sure that only the key(s) you wanted were added.
+```
+
+* デフォルトで22番ポートが指定されている
+* 22番ポートが閉じている場合は`-p ポート番号`でポートを指定して鍵を渡す
+
+```Shell
+$ $ ssh-copy-id -p ポート番号 user名@ipアドレス 
 ```
 
 ```Shell

@@ -216,13 +216,3 @@ iozone3 をアンインストール
 $ apt remove iozone3
 $ apt list --installed | grep iozone3
 ```
-
-===
-
-11/14
-5:30 - 7:30
-2h
-
-11/17
-4:00 - 6:30
-2.5h

@@ -99,3 +99,23 @@ inherit_gem:
 * どうしても `.rubocop_todo.yml` にignoreするルールを記載せざるをえなくなった場合のみファイルを残す
 * `.rubocop.yml` ファイルの`inherit_from: .rubocop_todo.yml` の記述も`.rubocop_todo.yml` ファイルを削除した時点で削除する
 * 予め無視するルールは`.rubocop.yml` に記載し、`rubocop_toco.yml` ファイルはリモートにpush しない
+
+## rubocop のRubyのバージョンを指定する
+
+* `#frozen_string_literal: true` のマジックコメントを追加しているのにrubocop で`Freeze mutable objects assigned to constants.` と表示されるのでRubyバージョンを指定する
+* バージョンを指定したがエラーは消えなかった
+* `#frozen_string_literal: true` は文字列オブジェクトを`freez` するだけなので定数には別途で`freez` する必要がある
+
+[RuboCopが静的解析のRubyバージョンを決める流れ \- koicの日記](https://koic.hatenablog.com/entry/target-ruby-version-of-rubocop)
+
+```
+# .rubocop.yml
+
+inherit_gem:
+  rubocop-fjord:
+    - "config/rubocop.yml"
+
+# Ruby バージョンを指定
+AllCops:
+  TargetRubyVersion: 3.0.3
+```
