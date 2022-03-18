@@ -236,3 +236,10 @@ $ git revert HEAD~2 or git revert HEAD~~
 # コミットID のコミットを打ち消す
 $ git revert コミットID
 ```
+
+## 間違ったコミットコメントをpush した後に修正する
+
+* `git push -f` を使う
+* 共有リポジトリでは禁止
+
+[typoしてpushしてしまったコミットコメントを修正してpushしなおす方法 \- Qiita](https://qiita.com/ykawakami/items/71b462057a8d714d7382)

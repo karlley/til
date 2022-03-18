@@ -78,3 +78,14 @@ $ git checkout -b update-readme origin/update-readme # チェックアウト
 * Open にしたPR をドラフトに変更する場合は該当PRのページで`Reviewers` > `Convert to draft` をクリックする
 * ドラフトのPRには左上部に`Draft` がグレーのボタンで表示される
 * ドラフトからOpen のPRに変更したい場合は該当PR のページ下部の`Ready for review` をクリックする
+
+## pull request にレビュー前にコメントを追加
+
+[心がけている PR の書き方とコードレビューについて](https://zenn.dev/ckona/articles/my-codereview)
+
+[GitHub – Pull Requestをレビュー【コメントの書き方と修正依頼】 \| Howpon\[ハウポン\]](https://howpon.com/6351)
+
+* PR 画面でコード横の`+`をクリックして行毎のコメントを追加、`Start your review` をクリック
+* 行毎のコメントが終わったら右上の`Finish your review` をクリック
+* PR 自体に対するコメントを追加して`Submit your review` をクリック
+* PR 画面に遷移後にコメントが反映されているか確認
