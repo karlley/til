@@ -23,3 +23,10 @@ HTMLをより書き易くしたもの
 3. `Emmet: Wrap Individual Lines with Abbreviation` を選択
 4. 囲みたいタグ名を入力(複数選択の場合は`*`も入力)
 5. 選択した文字が任意のタグで囲まれる
+
+## 折りたたみ
+
+HTML 直書きして折りたたみで表示させる
+
+[GitHubのMarkdownで折りたたみ記法の中身を整形させる方法](https://gist.github.com/Phroneris/e7e6c869640b95bd42434bdc995cd4f6)
+
