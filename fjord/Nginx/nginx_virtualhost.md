@@ -289,7 +289,7 @@ server {
   location / {
     root   /home/karlley/public_html/karlley.com/public/;
     index  index.html;
-    }
+   }
 }
 
 # 下記を追記
@@ -301,8 +301,8 @@ server {
   location / {
     root   /home/karlley/public_html/www.karlley.com/public/;
     index  index.html;
-    }
   }
+}
 ```
 
 4. 追加したドメインの名前解決を確認
@@ -368,8 +368,6 @@ $ ps ax | grep nginx
 * A: ドメインをIPアドレスに置き換えるレコード、基本的なレコード
 * MX: メールエクスチェンジの略、メールサーバのホスト名を記載されている
 * CNAME: キャノニカルネームの略、ドメインを別のドメインに置き換えるレコード、特定のドメインを別のドメインに転送する場合に使用
-
-===
 
 ## nginx、Virtural Host のディレクトリ構成
 
