@@ -453,3 +453,9 @@ $ apt list --installed | grep tree
 $ cd dir_name
 $ tree
 ```
+
+ディレクトリの深さを指定して確認
+
+```
+$ tree -L 深さを数値で指定
+```
