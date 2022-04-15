@@ -216,3 +216,12 @@ iozone3 をアンインストール
 $ apt remove iozone3
 $ apt list --installed | grep iozone3
 ```
+
+## apt の削除コマンドの違い
+
+[apt\-get のpurgeとremoveについて](https://teratail.com/questions/119697)
+
+* `apt remove`: パッケージを削除、設定ファイルは削除しない(再度インストールすると設定が引継がれる)
+* `apt purge`: パッケージ、設定ファイルを削除
+* `apt remove --purge`: `apt purge` と同じ
+* `apt autoremove`: 依存関係の無い不要なパッケージを自動削除
