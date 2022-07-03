@@ -103,7 +103,7 @@ $ rbenv install --list
 3.0.3 が無い
 
 # 3.0.3 が無いのでrbenv をupgrade
-$ brew rbenv upgrade
+$ brew upgrade rbenv
 
 # rbenv に3.0.3 があるか再度確認
 $ rbenv install --list
