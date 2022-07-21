@@ -57,7 +57,7 @@ $ git checkout -b update-readme origin/update-readme # チェックアウト
 
 [リポジトリ用のプルリクエストテンプレートの作成 \- GitHub Docs](https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
 
-[\.github/pull\_request\_template\.md](https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+[Pull Requestのテンプレートを作って効率よくレビューしよう！ \| DevelopersIO](https://dev.classmethod.jp/articles/pull-request-template/)
 
 1. GitHub 上で`Add file` からリポジトリのルートに`.github/pull_request_template.md` を作成
 2. 作成したテンプレートの内容を追記
