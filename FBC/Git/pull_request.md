@@ -59,6 +59,8 @@ $ git checkout -b update-readme origin/update-readme # チェックアウト
 
 [Pull Requestのテンプレートを作って効率よくレビューしよう！ \| DevelopersIO](https://dev.classmethod.jp/articles/pull-request-template/)
 
+[TIL/pull\_request\_template\.md at master · karlley/TIL](https://github.com/karlley/TIL/blob/master/FBC/Git/pull_request_template.md)
+
 1. GitHub 上で`Add file` からリポジトリのルートに`.github/pull_request_template.md` を作成
 2. 作成したテンプレートの内容を追記
 3. ページ下部の`Commit new file` から`デフォルトブランチ` にコミットする
