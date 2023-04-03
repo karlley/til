@@ -1,130 +1,124 @@
-# user_follow
+# user follow memo
 
-## 1. Friendshipモデル作成
+## redirect_toメソッドのnoticeの2つの書き方
 
-中間テーブルであるFriendshipsテーブルを作成。
+[【Rails】redirect\_toでのnoticeの2つの書き方 \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/01/06/175548)
 
-* `following_id`: フォローしている`user_id`、integer型
-* `follower_id`: フォローされている`user_id`、integer型
+## request.refererとは？
 
-```shell
-$ rails g model Friendship following_id:integer follower_id:integer
-```
+[【Rails】request\.refererとは？ \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/01/06/194930)
 
-作成されたmigrationファイルを下記のように修正。
+## 関連付けたモデルの外部キーへのpresense: trueは必要ない
 
-```ruby
-# db/migrate/〇〇_create_friendships.rb
+[【Rails】関連付けたモデルの外部キーへのpresense: trueは必要ない \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/01/07/081205)
 
-class CreateFriendships < ActiveRecord::Migration[6.1]
-  def change
-    create_table :friendships do |t|
-      t.integer :following_id, null: false
-      t.integer :follower_id, null: false
+## orderメソッドの使い方
 
-      t.timestamps
-    end
-    add_index :friendships, :following_id
-    add_index :friendships, :follower_id
-    add_index :friendships, [:following_id, :follower_id], unique: true
-  end
-end
-```
+[【Rails】orderメソッドの使い方 \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/01/08/185104)
 
-* `null: false`: 空データの保存を禁止する
-* `add_index`: データ検索を高速化する
-* `unique: true`: テーブル内で重複するデータを禁止する
+## 外部キー制約とは？
 
-`add_index :friendships, [:following_id, :follower_id], unique: true` の部分は`following_id` と`follower_id` の組み合わせが必ずユニークになるようにする為に指定します(複合キーインデックス)。
+[【Rails】外部キー制約とは？ \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/01/10/165450)
 
-[第12章 ユーザーをフォローする \- Railsチュートリアル](https://railstutorial.jp/chapters/following_users?version=4.2#sec-a_problem_with_the_data_model)
+## rails g controllerで作成するファイルのディレクトリを指定する
 
-修正後、`migrate` して反映させます。
+[rails g controllerで作成するファイルのディレクトリを指定する \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/01/10/172852)
 
-```shell
-$ rails db:migrate
-```
+## DHH流のコントローラ分割について
 
-## 2. User、Friendshipの2つのモデルに関連付け、バリデーションを追加
+[【Rails】DHH流のコントローラ分割について \- 時々とおまわり](https://karlley.hatenablog.jp/entry/2023/03/31/104410)
 
-2つのモデルへ関連付け、バリデーションを追加します。
+===
 
-```ruby
-# app/models/friendship.rb
+## render
 
-# frozen_string_literal: true
+`render` を使って遷移する場合は`flash.now` を使用しないとフラッシュメッセージが表示されない点に注意。
 
-class Friendship < ApplicationRecord
-  belongs_to :following, class_name: 'User'
-  belongs_to :follower, class_name: 'User'
+[flashとflash\.nowの違いを検証してみた \- Qiita](https://qiita.com/taraontara/items/2db82e6a0b528b06b949)
 
-  validates :following_id, presence: true
-  validates :follower_id, presence: true
-end
-```
+`render` と`redirect_to` の違いは？
+
+## データ保存の失敗時の分岐の方法
+
+* 成功: `redirect_to`
+* 失敗: `render`
+
+[レイアウトとレンダリング \- Railsガイド](https://railsguides.jp/layouts_and_rendering.html#render%E3%81%A8redirect-to%E3%81%AE%E9%81%95%E3%81%84%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B)
+
+[【Rails】データ保存の失敗時には、'redirect\_to'ではなく'render'を利用した方が良い理由 \- Qiita](https://qiita.com/yuki-n/items/2e64a179838c9086ab30)
+
+## flashとflash.nowの違い
+
+[flashとflash\.nowの違いを検証してみた \- Qiita](https://qiita.com/taraontara/items/2db82e6a0b528b06b949)
+
+## resouces、resouce、member、collectionの違い
+
+[index、create・new・edit・show・update・destroy](https://techracho.bpsinc.jp/baba/2020_11_20/15619)
+
+[Railsのルーティングの種類と要点まとめ \- Qiita](https://qiita.com/senou/items/f1491e53450cb347606b)
 
 ```ruby
-# app/models/user.rb
+# member
+followings_user GET    /users/:id/followings(.:format)           users#followings
+followers_user  GET    /users/:id/followers(.:format)            users#followers
 
-# frozen_string_literal: true
+# resourceで修正
+user_follower  GET     /users/:user_id/follower(.:format)        followers#show
+user_following GET     /users/:user_id/following(.:format)       followings#show
 
-class User < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-
-  has_one_attached :avatar
-
-  # どのユーザーをフォローするか
-  has_many :active_friendships, class_name: 'Friendship', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
-  # どのユーザーにフォローされるか
-  has_many :passive_friendships, class_name: 'Friendship', foreign_key: 'following_id', dependent: :destroy, inverse_of: :following
-
-  # フォローする全ユーザー
-  has_many :followings, through: :active_friendships, source: :following
-  # フォローされる全ユーザー
-  has_many :followers, through: :passive_friendships, source: :follower
-end
+# resoucesで修正
+user_followers  GET     /users/:user_id/followers(.:format)      followers#index
+user_followings GET     /users/:user_id/followings(.:format)     followings#index
 ```
 
-### class_name
+* `resources`: index、create、new、edit、show、update、destroy、id有り
+* `resource`: create、new、edit、show、update、destroy、index無し、id無し
+* `member`: 7つ以外のルーティングを追加、id有り
+* `collection`: 7対外のルーティングの追加、id無し
 
-> 関連付けの相手となるオブジェクト名を関連付け名から生成できない事情がある場合、class_nameオプションを用いてモデル名を直接指定できます。
+## 階層になったパーシャルの読み込み方
 
-関連先のUserモデルのオブジェクト名を`following`、`follower` として元のモデル名と異なる名前に指定しています。
-`class_name` オプション無しだと`following`、`follower` と同一名のテーブルを探しに行ってしまうので、Userモデルを参照するために`class_name: 'User'` が必要。
+[\[Rails\] partialが自身からの相対パスで他partailを参照する場合の注意 \- Qiita](https://qiita.com/eduidl/items/5ea74df2db471e15b4cd)
 
-[Active Record の関連付け \- Railsガイド](https://railsguides.jp/association_basics.html#belongs-to%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-class-name)
+## DBの制約とバリデーションで異なる例外が搬出される
 
-[アソシエーションにおけるclass\_nameの定義！ \- Qiita](https://qiita.com/wacker8818/items/eccdf0a63616feb14a70)
+* DBの制約: ActiveRecord::RecordNotUnique
+* バリデーション: ActiveRecord::RecordInvalid 
 
-### foreign_key
+[validates メソッドでユニーク制約を行うと ActiveRecord::RecordNotUnique ではなく、 ActiveRecord::RecordInvalid が raise される \- Qiita](https://qiita.com/ikamirin/items/1a197fe13f09ae863d08)
 
-参照するテーブルの外部キーを指定する。
+https://qiita.com/ikamirin/items/1a197fe13f09ae863d08
 
-* `active_friendships`: 「どのユーザーをフォローするか」なのでフォローする対象ユーザーの`follower_id` に設定
-* `passive_friendships`: 「どのユーザーにフォローされるか」なのでフォローされる対象ユーザーの`following_id` に設定
+## createは成否に関わらずモデルオブジェクトを返す
 
-### inverse_of
+[【Rails】 createメソッドの使い方とは？new・saveメソッドとの違い \| Pikawaka](https://pikawaka.com/rails/create)
 
-> Active Recordは、:throughや:foreign_keyオプションを使う双方向関連付けを自動認識しません。関連付けの反対側でカスタムスコープが使われていると、同様に自動認識しなくなります。
+## 例外に関して
+### 例外を使ったエラーハンドリングについて
 
-* `foreign_key` オプションを使用した双方向の関連付けの為、明示的に記述することが必要。
-* `inverse_of` オプションを付与しない場合、rubocopで`Rails/InverseOf: Specify an :inverse_of option.` の警告が出る。
+* 例外を使ってエラーハンドリングすることで、処理の失敗の原因を明確にできる
+* Active Recordのトランザクションは例外の送出をロールバックのトリガーになっているので例外を扱う必要がある
+* ガード節が増える、処理のネストが深い場合は例外を使った方がスッキリ書ける
+* ブール値を使うだけで十分な場合は無理に例外を使わなくてもok
 
-[Active Record の関連付け \- Railsガイド](https://railsguides.jp/association_basics.html#%E5%8F%8C%E6%96%B9%E5%90%91%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91)
+###  例外処理の Rails.loggerについて
 
-[RuboCopの Rails/InverseOf について調べた \- sometimes I laugh](https://sil.hatenablog.com/entry/rubocop-rails-inverse-of)
+* 例外処理に`Rails.logger` は必須ではない
+* 問題を記録、分析に使う場合は必要
+  * 基本的に起きてほしくないことだけどたまに起きうることがある、ただユーザーの操作は続行させたいので例外を捕捉してロギングしつつ、処理を続行する場合など
+* ログを残す目的が明確な場合に限ってロギング処理を追加する
 
-[\[ActiveRecord\] 双方向関連付けとinverse\_of](https://zenn.dev/igaiga/books/rails-practice-note/viewer/ar_inverse_of)
+## byebugでソースを読む
 
-### source
+[初心者でもカンタンにRailsの中身のコードをコードリーディングする方法 \- Qiita](https://qiita.com/jabba/items/8a9ac664eb2a0e61e621)
 
->  :source オプションには:throughで指定したモデルから、取得したいモデルへたどるための関連名を書きます。
+[printデバッグにさようなら！Ruby初心者のためのByebugチュートリアル \- Qiita](https://qiita.com/jnchito/items/5aaf323ab4f24b526a61#byebug%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A7%E3%82%B3%E3%83%BC%E3%83%89%E5%86%85%E3%81%AB%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80)
 
-`through` で指定したモデル(`active_friendships`、`passive_friendships`)を通して取得したいオブジェクト名を指定します。
+[til/rubygems\.md at master · karlley/til](https://github.com/karlley/til/blob/master/FBC/Ruby/rubygems.md)
 
-* フォローしている人(`followings`): フォロー関係(`active_friendships`)の`following` カラムから対象ユーザーのフォロー関係を探す。
-* フォローされている人(`followers`): 被フォロー関係(`passive_friendships`)の`follower` カラムから対象ユーザーの被フォロー関係を探す。
+1. byebug gemが入っているか確認
+2. `byebug` を該当コードに挿入
+3. `rails s` 
+4. byebugでstep実行でソースコードを掘っていく
 
-[\[ActiveRecord\] through, source](https://zenn.dev/igaiga/books/rails-practice-note/viewer/ar_through_source)
 
